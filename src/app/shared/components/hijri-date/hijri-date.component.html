@@ -1,0 +1,33 @@
+
+<div class="si-widget si-hijri-date-widget" >
+  <div class="si-hijri-date-section" *ngIf="!isLoading && !hasError">
+    <div class="si-hijri-date-heading"
+        [class.si-widget-heading-bg-dark]="themeService.isDark"
+        [class.si-widget-heading-bg-light]="!themeService.isDark">
+      <span class="si-hd-weekday"
+            [class.si-text-dark]="themeService.isDark"
+            [class.si-text-light]="!themeService.isDark">{{ hijriDate.weekday }}</span>
+    </div>
+    <div class="si-hijri-date-content"
+         [ngClass]="{
+           'si-widget-content-bg-dark': themeService.isDark,
+           'si-widget-content-bg-light': !themeService.isDark,
+           'si-text-dark': themeService.isDark,
+           'si-text-light': !themeService.isDark
+         }">
+      <div class="si-hd-day-month">
+        <span class="si-hd-day">{{ hijriDate.day }}</span>
+        <span class="si-hd-month">{{ hijriDate.month }}</span>
+      </div>
+      <span class="si-hd-year">{{ hijriDate.year }}</span>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary"  *ngIf="!isLoading && hasError" (click)="retry()">Primary</button>
+
+  <app-looping-rhombuses-spinner
+    [rhombusSize]="15"
+    [animationDuration]="1500"
+    [color]="'#ff1d5e'"
+    *ngIf="isLoading && !hasError"></app-looping-rhombuses-spinner>
+</div>

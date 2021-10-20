@@ -1,1 +1,131 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+@font-face {
+  font-family: "ubuntu-regular";
+  src: url(./assets/fonts/UbuntuMono-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu-bold";
+  src: url(./assets/fonts/UbuntuMono-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu-italic";
+  src: url(./assets/fonts/UbuntuMono-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu-bold-italic";
+  src: url(./assets/fonts/UbuntuMono-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "titillium-light";
+  src: url(./assets/fonts/TitilliumWeb-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "titillium-regular";
+  src: url(./assets/fonts/TitilliumWeb-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "titillium-bold";
+  src: url(./assets/fonts/TitilliumWeb-Bold.ttf) format("truetype");
+}
+
+
+.mat-body, .mat-body-1, .mat-typography {
+  font: 16px titillium-regular;
+}
+
+body {
+  margin: 0 auto;
+  font-family: titillium-regular;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/*
+<-------------- DARK THEME -------------->
+*/
+
+.si-sidebar-dark {
+  background-color: #373738;
+  box-shadow: #000000 0px 0px 10px;
+}
+
+.si-container-dark {
+  background-color: #4e4e4e;
+}
+
+.si-footer-dark {
+  background-color: #29292a;
+}
+
+.si-logo-dark > g {
+  fill: #d5d5d5;
+}
+
+.si-icon-dark > g {
+  fill: #b14d4d;
+}
+
+.si-text-dark {
+  color: #dbdbdb;
+}
+
+.si-widget-heading-bg-dark {
+  background-color: #544687;
+}
+
+.si-widget-content-bg-dark {
+  background-color: #585858;
+}
+
+/*
+<-------------- LIGHT THEME -------------->
+*/
+
+.si-sidebar-light {
+  background-color: #fbfbfb;
+  box-shadow: #b3b3b3 0px 0px 10px;
+}
+
+.si-container-light {
+  background-color: #ebebeb;
+}
+
+.si-footer-light {
+  background-color: #f7f7f7;
+}
+
+.si-logo-light > g {
+  fill: #363636;
+}
+
+.si-icon-light > g {
+  fill: #ef6565;
+}
+
+.si-text-light {
+  color: #454545;
+}
+
+.si-widget-heading-bg-light {
+  background-color: #baaaf1;
+}
+
+.si-widget-content-bg-light {
+  background-color: #e7e7e7;
+}

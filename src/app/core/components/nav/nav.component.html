@@ -1,0 +1,54 @@
+
+<div class="si-nav">
+  <ul>
+    <li *ngFor="let item of navgation" ><a
+      [class.si-text-dark]="themeService.isDark"
+      [class.si-text-light]="!themeService.isDark"><img
+        src="assets/svg/{{ item.icon }}.svg"
+        width="25px"
+        height="25px"
+        onload="SVGInject(this)"
+        [class.si-icon-dark]="themeService.isDark"
+        [class.si-icon-light]="!themeService.isDark" /> {{ item.text }}</a></li>
+
+    <!--<li><a><img
+      src="assets/svg/drum.svg"
+      width="20px"
+      height="20px"
+      onload="SVGInject(this)"
+      [class.si-icon-dark]="themeService.isDark"
+      [class.si-icon-light]="!themeService.isDark" /> Urs</a></li>
+
+    <li><a><img
+      src="assets/svg/dish.svg"
+      width="20px"
+      height="20px"
+      onload="SVGInject(this)"
+      [class.si-icon-dark]="themeService.isDark"
+      [class.si-icon-light]="!themeService.isDark" /> Niaz</a></li>
+
+    <li><a><img
+      src="assets/svg/pin.svg"
+      width="20px"
+      height="20px"
+      onload="SVGInject(this)"
+      [class.si-icon-dark]="themeService.isDark"
+      [class.si-icon-light]="!themeService.isDark" /> Location</a></li>
+
+    <li><a><img
+      src="assets/svg/contact.svg"
+      width="20px"
+      height="20px"
+      onload="SVGInject(this)"
+      [class.si-icon-dark]="themeService.isDark"
+      [class.si-icon-light]="!themeService.isDark" /> Contact</a></li>
+
+    <li><a><img
+      src="assets/svg/settings.svg"
+      width="20px"
+      height="20px"
+      onload="SVGInject(this)"
+      [class.si-icon-dark]="themeService.isDark"
+      [class.si-icon-light]="!themeService.isDark" /> Settings</a></li>-->
+  </ul>
+</div>

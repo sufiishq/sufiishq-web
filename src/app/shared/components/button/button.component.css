@@ -1,0 +1,19 @@
+.si-button {
+  background-color: #0089ff;
+  padding: 5px 10px 5px 10px;
+  font-family: titillium-light;
+  font-size: 16px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.si-button:hover {
+  background-color: #1160ba;
+}
+
+.si-button:active {
+  background-color: #1885e3;
+}

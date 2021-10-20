@@ -1,0 +1,45 @@
+.si-hijri-date-widget {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.si-hijri-date-section {
+  width: 100%
+}
+
+.si-hijri-date-heading {
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.si-hd-weekday {
+  font-family: titillium-bold;
+}
+
+.si-hijri-date-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.si-hd-day-month {
+  float: left;
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.si-hd-day {
+  font-family: titillium-bold;
+  font-size: 40px;
+}
+
+.si-hd-month {
+  font-size: 40px;
+}
+
