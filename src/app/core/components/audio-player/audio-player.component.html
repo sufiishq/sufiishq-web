@@ -1,0 +1,98 @@
+
+<div class="si-audio-player">
+
+  <div class="si-audio-control">
+
+    <span class="si-audio-player-btn" [ngClass]="themeService.audioIcon" *ngIf="playerState == PlayerStateEnum.IDLE || playerState == PlayerStateEnum.PAUSE" (click)="doPlay()">
+      <img
+        src="../../../../assets/svg/play.svg"
+        width="25px" height="25px"
+        onload="SVGInject(this)"/>
+    </span>
+
+    <span class="si-audio-player-btn" [ngClass]="themeService.audioIcon" *ngIf="playerState == PlayerStateEnum.PLAYING" (click)="doPause()">
+        <img
+          src="../../../../assets/svg/pause.svg"
+          width="25px"
+          height="25px"
+          onload="SVGInject(this)"/>
+      </span>
+
+    <app-spring-spinner
+      [size]="25"
+      [animationDuration]="1500"
+      [color]="'#ff1d5e'"
+      class="si-audio-player-loader"
+      *ngIf="playerState == PlayerStateEnum.CONNECTING"></app-spring-spinner>
+
+  </div>
+
+  <div class="si-audio-seekbar-section">
+    <div
+      class="si-audio-track-time"
+      [ngClass]="themeService.text">{{ timeElapsed }}</div>
+
+    <div class="si-audio-seekbar-container">
+      <mat-slider thumbLabel [value]="seekValue" [min]="0" [max]="seekMaxValue" (mousedown)="onFocusSeekbar()" (window:mouseup)="onReleaseSeekbar()" (change)="onSeekChanged($event.value)" [disabled]="playerState == PlayerStateEnum.IDLE || playerState == PlayerStateEnum.CONNECTING" [ngClass]="themeService.audioSeekbar"></mat-slider>
+    </div>
+
+    <div
+      class="si-audio-track-length"
+      [ngClass]="themeService.text">{{ duration }}</div>
+
+  </div>
+  <div
+    class="si-audio-volume-control"
+    (click)="handleVolumeBoxClicked($event)"
+    [ngClass]="themeService.audioIcon">
+
+    <div class="si-audio-volume-slider" [hidden]="!showVolumeBox">
+      <mat-slider [vertical]="true" [value]="volume" [min]="0" [max]="100" (input)="setVolume($event.value)" [ngClass]="themeService.audioSeekbar"></mat-slider>
+    </div>
+
+    <span (click)="openVolumeBox($event)">
+      <span [hidden]="!(volume > 70 && volume <= 100)">
+        <img
+          src="../../../../assets/svg/volume_full.svg"
+          width="25px"
+          height="25px"
+          onload="SVGInject(this)"/>
+      </span>
+      <span [hidden]="!(volume > 30 && volume <= 70)">
+        <img
+          src="../../../../assets/svg/volume_medium.svg"
+          width="25px"
+          height="25px"
+          onload="SVGInject(this)"/>
+      </span>
+      <span [hidden]="!(volume > 0 && volume <= 30)">
+        <img
+          src="../../../../assets/svg/volume_low.svg"
+          width="25px"
+          height="25px"
+          onload="SVGInject(this)"/>
+      </span>
+      <span [hidden]="!(volume == 0)">
+        <img
+          src="../../../../assets/svg/volume_mute.svg"
+          width="25px"
+          height="25px"
+          onload="SVGInject(this)"/>
+      </span>
+    </span>
+
+  </div>
+  <div class="si-audio-track-info-section">
+
+    <span class="si-audio-cover-photo">
+      <img src="../../../../assets/track_image.jpg" width="60px" />
+    </span>
+    <div class="si-audio-track-info">
+        <span class="si-audio-track-title" [ngClass]="themeService.text">Track title</span>
+        <span class="si-audio-track-meta" [ngClass]="themeService.text">Karachi - 1992</span>
+    </div>
+
+  </div>
+
+  <div class="si-audio-player-overlay" *ngIf="playerState == PlayerStateEnum.CONNECTING"></div>
+</div>

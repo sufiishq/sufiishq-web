@@ -56,6 +56,50 @@ body {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+.mat-dialog-container {
+  padding: 0 !important;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+.mat-slider {
+  width: 100%;
+}
+
+.si-dialog {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.si-panel-head {
+  border-radius: 6px 6px 0px 0px;
+  padding: 6px 12px;
+  font-family: titillium-bold;
+  display: flex;
+  flex-direction: row;
+}
+
+.si-panel-heading {
+  flex-grow: 1;
+  font-size: 18px;
+}
+
+.si-panel-btn-close {
+  width: 20px;
+  cursor: pointer;
+  margin-top: 3px;
+  height: 20px;
+}
+
+.si-panel-body {
+  border-radius: 0px 0px 6px 6px;
+  padding: 8px;
+  flex-grow: 1;
+}
+
+
 /*
 <-------------- DARK THEME -------------->
 */
@@ -73,11 +117,11 @@ body {
   background-color: #29292a;
 }
 
-.si-logo-dark > g {
+.si-logo-dark g {
   fill: #d5d5d5;
 }
 
-.si-icon-dark > g {
+.si-icon-dark g {
   fill: #b14d4d;
 }
 
@@ -91,6 +135,39 @@ body {
 
 .si-widget-content-bg-dark {
   background-color: #585858;
+}
+
+.si-panel-head-bg-dark {
+  background-color: #544687;
+}
+
+.si-panel-body-bg-dark {
+  background-color: #585858;
+}
+
+.si-audio-icon-dark g {
+  fill: #dbdbdb;
+}
+
+.si-seekbar-dark .mat-slider-thumb {
+  border-color: rgba(255, 255, 255, 0.26) !important;
+  background-color: #f1f1f1 !important;
+}
+
+.si-seekbar-dark .mat-slider-track-background {
+  background-color: rgba(102, 102, 102, 0.26) !important;
+}
+
+.si-seekbar-dark .mat-slider-track-fill {
+  background-color: #f1f1f1 !important;
+}
+
+.si-seekbar-dark .mat-slider-thumb-label {
+  background-color: transparent !important;
+}
+
+.si-seekbar-dark .mat-slider-thumb-label-text {
+  color: #f1f1f1;
 }
 
 /*
@@ -110,11 +187,11 @@ body {
   background-color: #f7f7f7;
 }
 
-.si-logo-light > g {
+.si-logo-light g {
   fill: #363636;
 }
 
-.si-icon-light > g {
+.si-icon-light g {
   fill: #ef6565;
 }
 
@@ -128,4 +205,37 @@ body {
 
 .si-widget-content-bg-light {
   background-color: #e7e7e7;
+}
+
+.si-panel-head-bg-light {
+  background-color: #baaaf1;
+}
+
+.si-panel-body-bg-light {
+  background-color: #e7e7e7;
+}
+
+.si-audio-icon-light g {
+  fill: #525252;
+}
+
+.si-seekbar-light .mat-slider-thumb {
+  border-color: rgba(0, 0, 0, 0.26) !important;
+  background-color: #4c4c4c !important;
+}
+
+.si-seekbar-light .mat-slider-track-background {
+  background-color: rgba(0,0,0,.26) !important;
+}
+
+.si-seekbar-light .mat-slider-track-fill {
+  background-color: #4c4c4c !important;
+}
+
+.si-seekbar-light .mat-slider-thumb-label {
+  background-color: transparent !important;
+}
+
+.si-seekbar-light .mat-slider-thumb-label-text {
+  color: #4c4c4c;
 }

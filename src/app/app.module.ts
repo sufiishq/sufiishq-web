@@ -8,10 +8,12 @@ import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from "@angular/material/slider";
 import {MatButtonModule} from "@angular/material/button";
+import { KalamComponent } from './features/kalam/kalam/kalam.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KalamComponent
   ],
   imports: [
     BrowserModule,

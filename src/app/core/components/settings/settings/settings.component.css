@@ -1,0 +1,9 @@
+.si-setting-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.si-theme-text {
+  flex-grow: 1;
+}
+

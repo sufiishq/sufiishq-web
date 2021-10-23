@@ -1,10 +1,9 @@
 
-<div class="si-logo">
+<div class="si-logo"
+  [ngClass]="themeService.logo">
   <img
     src="assets/svg/logo.svg"
     width="250px"
     height="210px"
-    onload="SVGInject(this)"
-    [class.si-logo-dark]="themeService.isDark"
-    [class.si-logo-light]="!themeService.isDark" />
+    onload="SVGInject(this)"/>
 </div>
