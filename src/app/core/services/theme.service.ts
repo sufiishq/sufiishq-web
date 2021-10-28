@@ -40,4 +40,8 @@ export class ThemeService {
   get audioSeekbar(): string {
     return this.isDark ? 'si-seekbar-dark' : 'si-seekbar-light'
   }
+
+  get audioVolumeBar(): string {
+    return this.isDark ? 'si-audio-volume-bar-dark' : 'si-audio-volume-bar-light'
+  }
 }

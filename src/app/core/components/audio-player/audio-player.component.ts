@@ -2,6 +2,7 @@ import {Component, HostListener, Inject, Input, OnInit} from '@angular/core';
 import {ThemeService} from "../../services/theme.service";
 import {AudioService} from "./audio.service";
 import { DOCUMENT } from '@angular/common'
+import {TrackService} from "./track.service";
 
 @Component({
   selector: 'si-audio-player',
@@ -9,8 +10,6 @@ import { DOCUMENT } from '@angular/common'
   styleUrls: ['./audio-player.component.css']
 })
 export class AudioPlayerComponent implements OnInit {
-
-  @Input('track-info') trackInfo = {}
 
   PlayerStateEnum = PlayerState
   playerState = PlayerState.IDLE
@@ -23,7 +22,7 @@ export class AudioPlayerComponent implements OnInit {
 
   private lockSeekbar = false
 
-  constructor(public themeService: ThemeService, private audioService: AudioService, @Inject(DOCUMENT) private dom: HTMLDocument) {}
+  constructor(public themeService: ThemeService, private audioService: AudioService, @Inject(DOCUMENT) private dom: HTMLDocument, public trackService: TrackService) {}
 
   ngOnInit(): void {
 
@@ -73,7 +72,9 @@ export class AudioPlayerComponent implements OnInit {
 
     // play
     if (this.playerState == PlayerState.IDLE) {
-      this.audioService.setAudio("https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_2MG.mp3")
+      if (this.trackService.activeTrack) {
+        this.audioService.setAudio(this.trackService.activeTrack.src)
+      }
     }
 
     // resume
@@ -90,7 +91,7 @@ export class AudioPlayerComponent implements OnInit {
 
   onSeekChanged(value: number | null) {
     if (value == null) return
-    console.log(value)
+
     if (this.playerState == PlayerState.PLAYING || this.playerState == PlayerState.PAUSE) {
       this.audioService.seekAudio(value)
     }

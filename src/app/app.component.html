@@ -21,13 +21,19 @@
     <!-- main container where all the components will be rendered-->
     <div class="si-container"
       [class.si-container-dark]="themeService.isDark"
-      [class.si-container-light]="!themeService.isDark"></div>
+      [class.si-container-light]="!themeService.isDark">
+
+      <si-feature-kalam></si-feature-kalam>
+
+    </div>
 
 
     <!-- footer where player controls will be renders -->
-    <div class="si-footer no-select"
-         [class.si-footer-dark]="themeService.isDark"
-         [class.si-footer-light]="!themeService.isDark">
+    <div
+      class="si-footer no-select"
+      [class.si-footer-dark]="themeService.isDark"
+      [class.si-footer-light]="!themeService.isDark"
+      *ngIf="trackService.activeTrack" >
 
       <si-audio-player></si-audio-player>
 

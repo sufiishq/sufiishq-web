@@ -1,0 +1,110 @@
+.si-kalam-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+  position: relative;
+}
+
+.si-kalam-search-section {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+
+.si-kalam-search-bar {
+  margin: 0;
+  padding: 12px;
+  height: 29px;
+  flex-grow: 1;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'titillium-regular';
+  font-size: 20px;
+}
+
+.si-kalam-search-bar:focus {
+  background-color: #c7c6c6;
+}
+
+.si-kalam-item-section {
+  flex-grow: 1;
+}
+
+.si-kalam-item-section > ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 35px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.si-kalam-item-section > ul > li {
+  display: flex;
+  flex-direction: row;
+  min-width: 300px;
+  flex-grow: 1;
+  height: 90px;
+}
+
+.si-kalam-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.si-kalam-head {
+  width: 90px;
+  border-radius: 5px 0 0 5px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.si-kalam-body {
+  padding: 10px;
+  flex-grow: 1;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 0 5px 5px 0;
+  flex-direction: column;
+}
+
+.si-kalam-title {
+  display: flex;
+  font-family: 'titillium-light';
+  font-size: 17px;
+}
+
+.si-kalam-info {
+  display: flex;
+  font-size: 14px;
+  font-family: 'titillium-bold';
+}
+
+.si-kalam-pagination-section {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  padding: 10px 0;
+  position: relative;
+}
+
+.si-kalam-code {
+  font-size: 13px;
+}
+
+.si-kalam-overlay {
+  left: 0;
+  top: 0;
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  bottom: 0;
+}

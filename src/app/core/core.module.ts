@@ -11,6 +11,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatSliderModule} from "@angular/material/slider";
 import {SpringSpinnerModule} from "angular-epic-spinners";
 import {AudioService} from "./components/audio-player/audio.service";
+import {TrackService} from "./components/audio-player/track.service";
 
 
 
@@ -34,8 +35,7 @@ import {AudioService} from "./components/audio-player/audio.service";
     AudioPlayerComponent
   ],
   providers: [
-    ThemeService,
-    AudioService
+    ThemeService
   ]
 })
 export class CoreModule { }

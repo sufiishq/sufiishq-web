@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,12 +8,14 @@ import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from "@angular/material/slider";
 import {MatButtonModule} from "@angular/material/button";
-import { KalamComponent } from './features/kalam/kalam/kalam.component';
+import {FeatureModule} from "./features/feature.module";
+import {TrackService} from "./core/components/audio-player/track.service";
+import {AudioService} from "./core/components/audio-player/audio.service";
+import {NgxSpinnerModule} from "ngx-spinner";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    KalamComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -22,10 +24,12 @@ import { KalamComponent } from './features/kalam/kalam/kalam.component';
     SharedModule,
     MatSliderModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    FeatureModule
   ],
   providers: [
-
+    AudioService,
+    TrackService
   ],
   bootstrap: [AppComponent]
 })

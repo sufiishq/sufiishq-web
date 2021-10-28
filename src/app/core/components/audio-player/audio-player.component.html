@@ -5,14 +5,14 @@
 
     <span class="si-audio-player-btn" [ngClass]="themeService.audioIcon" *ngIf="playerState == PlayerStateEnum.IDLE || playerState == PlayerStateEnum.PAUSE" (click)="doPlay()">
       <img
-        src="../../../../assets/svg/play.svg"
+        src="assets/svg/play.svg"
         width="25px" height="25px"
         onload="SVGInject(this)"/>
     </span>
 
     <span class="si-audio-player-btn" [ngClass]="themeService.audioIcon" *ngIf="playerState == PlayerStateEnum.PLAYING" (click)="doPause()">
         <img
-          src="../../../../assets/svg/pause.svg"
+          src="assets/svg/pause.svg"
           width="25px"
           height="25px"
           onload="SVGInject(this)"/>
@@ -46,35 +46,35 @@
     (click)="handleVolumeBoxClicked($event)"
     [ngClass]="themeService.audioIcon">
 
-    <div class="si-audio-volume-slider" [hidden]="!showVolumeBox">
+    <div class="si-audio-volume-bar" [ngClass]="themeService.audioVolumeBar" [hidden]="!showVolumeBox">
       <mat-slider [vertical]="true" [value]="volume" [min]="0" [max]="100" (input)="setVolume($event.value)" [ngClass]="themeService.audioSeekbar"></mat-slider>
     </div>
 
     <span (click)="openVolumeBox($event)">
       <span [hidden]="!(volume > 70 && volume <= 100)">
         <img
-          src="../../../../assets/svg/volume_full.svg"
+          src="assets/svg/volume_full.svg"
           width="25px"
           height="25px"
           onload="SVGInject(this)"/>
       </span>
       <span [hidden]="!(volume > 30 && volume <= 70)">
         <img
-          src="../../../../assets/svg/volume_medium.svg"
+          src="assets/svg/volume_medium.svg"
           width="25px"
           height="25px"
           onload="SVGInject(this)"/>
       </span>
       <span [hidden]="!(volume > 0 && volume <= 30)">
         <img
-          src="../../../../assets/svg/volume_low.svg"
+          src="assets/svg/volume_low.svg"
           width="25px"
           height="25px"
           onload="SVGInject(this)"/>
       </span>
       <span [hidden]="!(volume == 0)">
         <img
-          src="../../../../assets/svg/volume_mute.svg"
+          src="assets/svg/volume_mute.svg"
           width="25px"
           height="25px"
           onload="SVGInject(this)"/>
@@ -83,13 +83,10 @@
 
   </div>
   <div class="si-audio-track-info-section">
-
-    <span class="si-audio-cover-photo">
-      <img src="../../../../assets/track_image.jpg" width="60px" />
-    </span>
+    
     <div class="si-audio-track-info">
-        <span class="si-audio-track-title" [ngClass]="themeService.text">Track title</span>
-        <span class="si-audio-track-meta" [ngClass]="themeService.text">Karachi - 1992</span>
+        <span class="si-audio-track-title" [ngClass]="themeService.text">{{ trackService.activeTrack?.title }}</span>
+        <span class="si-audio-track-meta" [ngClass]="themeService.text">{{ trackService.activeTrack?.location }} {{ trackService.activeTrack?.year }}</span>
     </div>
 
   </div>
