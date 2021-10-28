@@ -11,9 +11,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {FeatureModule} from "./features/feature.module";
 import {TrackService} from "./core/components/audio-player/track.service";
 import {AudioService} from "./core/components/audio-player/audio.service";
-import {NgxSpinnerModule} from "ngx-spinner";
 import {RouterModule} from "@angular/router";
 import {KalamComponent} from "./features/kalam/kalam.component";
+import {UrsComponent} from "./features/urs/urs.component";
 
 @NgModule({
   declarations: [
@@ -29,9 +29,8 @@ import {KalamComponent} from "./features/kalam/kalam.component";
     MatButtonModule,
     FeatureModule,
     RouterModule.forRoot([
-      {
-        path: '**', component: KalamComponent
-      }
+      { path: 'urs', component: UrsComponent },
+      { path: '**', component: KalamComponent }
     ])
   ],
   providers: [

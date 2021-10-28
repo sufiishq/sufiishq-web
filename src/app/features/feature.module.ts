@@ -4,12 +4,14 @@ import {KalamComponent} from "./kalam/kalam.component";
 import {KalamService} from "./kalam/kalam.service";
 import {MatButtonModule} from "@angular/material/button";
 import {NgxSpinnerModule} from "ngx-spinner";
+import { UrsComponent } from './urs/urs.component';
 
 
 
 @NgModule({
   declarations: [
-    KalamComponent
+    KalamComponent,
+    UrsComponent
   ],
   imports: [
     CommonModule,
