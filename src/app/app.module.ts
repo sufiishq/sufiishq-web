@@ -14,6 +14,7 @@ import {AudioService} from "./core/components/audio-player/audio.service";
 import {RouterModule} from "@angular/router";
 import {KalamComponent} from "./features/kalam/kalam.component";
 import {UrsComponent} from "./features/urs/urs.component";
+import {LocationComponent} from "./features/location/location.component";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {UrsComponent} from "./features/urs/urs.component";
     FeatureModule,
     RouterModule.forRoot([
       { path: 'urs', component: UrsComponent },
+      { path: 'location', component: LocationComponent },
       { path: '**', component: KalamComponent }
     ])
   ],
