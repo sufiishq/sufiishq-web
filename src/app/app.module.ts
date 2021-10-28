@@ -12,6 +12,8 @@ import {FeatureModule} from "./features/feature.module";
 import {TrackService} from "./core/components/audio-player/track.service";
 import {AudioService} from "./core/components/audio-player/audio.service";
 import {NgxSpinnerModule} from "ngx-spinner";
+import {RouterModule} from "@angular/router";
+import {KalamComponent} from "./features/kalam/kalam.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,12 @@ import {NgxSpinnerModule} from "ngx-spinner";
     MatSliderModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    FeatureModule
+    FeatureModule,
+    RouterModule.forRoot([
+      {
+        path: '**', component: KalamComponent
+      }
+    ])
   ],
   providers: [
     AudioService,
