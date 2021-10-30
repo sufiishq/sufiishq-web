@@ -1,1 +1,11 @@
-<p>location works!</p>
+<div class="si-location-section">
+  <div class="si-location-item" *ngFor="let location of locations">
+    <span class="si-location-bg" [style.background-image]="'url(' + location.background + ')'"></span>
+    <div class="si-location-address-section">
+      <span class="si-location-address">{{ location.city }} Address: {{ location.address }}</span>
+      <span class="si-location-open">
+        <button mat-raised-button color="accent" (click)="openLocationInGoogleMap(location)" >Open</button>
+      </span>
+    </div>
+  </div>
+</div>

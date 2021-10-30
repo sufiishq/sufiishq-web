@@ -1,0 +1,50 @@
+.si-location-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.si-location-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 60px;
+}
+
+.si-location-item {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px black;
+  border: 1px solid #b9b9b9;
+}
+
+.si-location-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+}
+
+.si-location-address-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background-color: #0000007d;
+  border-radius: 0 0 5px 5px;
+}
+.si-location-address {
+  color: white;
+  font-size: 20px;
+  float: left;
+}
+
+.si-location-open {
+  float: right;
+}
