@@ -39,6 +39,14 @@
   z-index: 1;
 }
 
+.si-left-sidebar {
+  border-right: 7px solid #9665ef;
+}
+
+.si-right-sidebar {
+  border-left: 7px solid #9665ef;
+}
+
 .si-footer {
   width: 100%;
   height: 70px;
