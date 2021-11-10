@@ -16,11 +16,10 @@ export class NavComponent implements OnInit {
   constructor(public themeService: ThemeService, public dialog: MatDialog, private router: Router) {
     this.navigation = [
       {id: 1, icon: 'kalam', text: 'Kalam', route: ''},
-      {id: 2, icon: 'drum', text: 'Urs', route: 'urs'},
-      {id: 3, icon: 'dish', text: 'Niaz', route: 'niaz'},
-      {id: 4, icon: 'pin', text: 'Location', route: 'location'},
-      {id: 5, icon: 'contact', text: 'Contact', route: 'contact'},
-      {id: 6, icon: 'settings', text: 'Settings'}
+      {id: 2, icon: 'drum', text: 'Urs / Niaz', route: 'urs'},
+      {id: 3, icon: 'pin', text: 'Location', route: 'location'},
+      {id: 4, icon: 'contact', text: 'Contact', route: 'contact'},
+      {id: 5, icon: 'settings', text: 'Settings'}
     ]
   }
 
@@ -30,7 +29,7 @@ export class NavComponent implements OnInit {
   handleNavigationClicked(navigation: any) {
     switch (navigation.id) {
       // handle settings click
-      case 6:
+      case 5:
         this.dialog.open(SettingsComponent, {
           width: '400px',
           height: '200px'

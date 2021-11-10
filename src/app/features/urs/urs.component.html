@@ -1,1 +1,22 @@
-<p>urs works!</p>
+<div class="si-event-section">
+  <div class="si-event-item" *ngFor="let event of events">
+    <div class="si-event-happening-block">
+      <span class="si-event-day">{{ event.day }}</span>
+      <span class="si-event-month">{{ getIslamicMonthByIndex(event.month) }}</span>
+    </div>
+    <div class="si-event-body">
+      <div class="si-event-header">
+        <span class="si-event-title">{{ event.title }}</span>
+        <span class="si-event-location">{{ event.location }}</span>
+      </div>
+      <div class="si-event-footer">
+        <span class="si-event-type">{{ getEventTypeName(event.type) }}</span>
+      </div>
+    </div>
+    <!--<div class="si-event-remaining-time-block">
+      <span class="si-event-day-remaining">3</span>
+      <span class="si-event-month-remaining">4</span>
+      <span class="si-event-remaining-label">Remaining</span>
+    </div>-->
+  </div>
+</div>

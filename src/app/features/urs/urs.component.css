@@ -1,0 +1,66 @@
+.si-event-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.si-event-item {
+  display: flex;
+  flex-direction: row;
+  box-shadow: #7a00ff 0 0 4px;
+  border-radius: 5px;
+}
+
+.si-event-happening-block {
+  padding: 10px;
+  background-color: #bfbfbf;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border-radius: 5px 0 0 5px;
+}
+
+.si-event-body {
+  flex-grow: 1;
+  background-color: #d5d5d5;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.si-event-remaining-time-block {
+  background-color: #bfbfbf;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+}
+
+span.si-event-day {
+  font-family: 'titillium-bold';
+  font-size: 22px;
+}
+
+span.si-event-month {
+  font-size: 25px;
+}
+
+.si-event-header {
+  display: flex;
+  flex-grow: 1;
+}
+
+.si-event-title {
+  flex-grow: 1;
+  font-size: 19px;
+}
+
+.si-event-type {
+  font-family: 'titillium-bold';
+}
