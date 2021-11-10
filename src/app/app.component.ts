@@ -10,7 +10,6 @@ import {Title} from "@angular/platform-browser";
 })
 export class AppComponent {
 
-  //slider = new MDCSlider(document.querySelector('.mdc-slider'));
   constructor(public themeService: ThemeService, public trackService: TrackService, private titleService: Title) {
     titleService.setTitle("SufiIshq")
   }
