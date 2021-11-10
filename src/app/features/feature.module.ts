@@ -6,6 +6,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {NgxSpinnerModule} from "ngx-spinner";
 import { UrsComponent } from './urs/urs.component';
 import { LocationComponent } from './location/location.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -13,7 +14,8 @@ import { LocationComponent } from './location/location.component';
   declarations: [
     KalamComponent,
     UrsComponent,
-    LocationComponent
+    LocationComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,

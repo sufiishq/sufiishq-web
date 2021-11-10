@@ -1,0 +1,17 @@
+<div class="si-contact-section">
+  <div class="si-contact-logo"
+       [ngClass]="themeService.logo">
+    <img
+      src="assets/svg/logo.svg"
+      width="750px"
+      height="660px"
+      onload="SVGInject(this)"/>
+  </div>
+  <div class="si-contact-detail">
+    <div class="si-contact-name">Syed Owais Ali</div>
+    <div class="si-contact-email" [style]="themeService.isDark ? 'color: #ffffff' : 'color: #000000'">dp.owaisali@gmail.com</div>
+    <div class="si-contact-whatsapp">
+      <button mat-raised-button color="accent" (click)="gotoWhatsApp()" >WhatsApp +92 312 2672245</button>
+    </div>
+  </div>
+</div>

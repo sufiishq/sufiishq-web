@@ -16,6 +16,7 @@ import {KalamComponent} from "./features/kalam/kalam.component";
 import {UrsComponent} from "./features/urs/urs.component";
 import {LocationComponent} from "./features/location/location.component";
 import {EnvironmentConfigService} from "./core/services/environment.config.service";
+import {ContactComponent} from "./features/contact/contact.component";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {EnvironmentConfigService} from "./core/services/environment.config.servi
     RouterModule.forRoot([
       { path: 'urs', component: UrsComponent },
       { path: 'location', component: LocationComponent },
+      { path: 'contact', component: ContactComponent },
       { path: '**', component: KalamComponent }
     ])
   ],

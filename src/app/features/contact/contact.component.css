@@ -1,0 +1,20 @@
+.si-contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.si-contact-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px
+}
+
+.si-contact-name {
+  font-size: 30px;
+  font-family: 'titillium-bold';
+  color: #9665ef;
+}
