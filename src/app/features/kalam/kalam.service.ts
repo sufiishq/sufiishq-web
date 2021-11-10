@@ -1,19 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { environment} from "../../../environments/environment";
+import {EnvironmentConfigService} from "../../core/services/environment.config.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class KalamService {
 
-  private host = `${environment.host}/api/kalam`
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private environmentConfig: EnvironmentConfigService) { }
 
   getKalams(keyword: string, offset: number, pageSize: number) {
-    console.log(this.host)
-    return this.http.get(`${this.host}?keyword=${keyword}&offset=${offset}&pageSize=${pageSize}`).toPromise().catch((err) => {
+    return this.http.get(`${this.environmentConfig.host}/api/kalam?keyword=${keyword}&offset=${offset}&pageSize=${pageSize}`).toPromise().catch((err) => {
       console.log(err.error.error)
     })
   }

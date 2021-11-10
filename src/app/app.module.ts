@@ -15,6 +15,7 @@ import {RouterModule} from "@angular/router";
 import {KalamComponent} from "./features/kalam/kalam.component";
 import {UrsComponent} from "./features/urs/urs.component";
 import {LocationComponent} from "./features/location/location.component";
+import {EnvironmentConfigService} from "./core/services/environment.config.service";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {LocationComponent} from "./features/location/location.component";
   ],
   providers: [
     AudioService,
-    TrackService
+    TrackService,
+    EnvironmentConfigService
   ],
   bootstrap: [AppComponent]
 })
