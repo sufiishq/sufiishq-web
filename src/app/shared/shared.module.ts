@@ -5,17 +5,22 @@ import { HijriDateComponent } from "./components/hijri-date/hijri-date.component
 import { HijriDateService } from "./components/hijri-date/hijri-date.service";
 import { HttpClientModule } from "@angular/common/http";
 import { LoopingRhumbusesSpinnerModule } from "angular-epic-spinners";
-import { ButtonComponent } from './components/button/button.component';
-import {MatButton, MatButtonModule} from "@angular/material/button";
+import { MatButtonModule} from "@angular/material/button";
+import { DividerComponent } from './components/divider/divider.component';
+import { AndroidAppBadgeComponent } from './android-app-badge/android-app-badge.component';
 
 
 
 @NgModule({
   declarations: [
-    HijriDateComponent
+    HijriDateComponent,
+    DividerComponent,
+    AndroidAppBadgeComponent
   ],
   exports: [
-    HijriDateComponent
+    HijriDateComponent,
+    DividerComponent,
+    AndroidAppBadgeComponent
   ],
   imports: [
     CommonModule,

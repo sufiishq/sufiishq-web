@@ -109,6 +109,10 @@ body {
   width: 10% !important;
 }
 
+.si-left-sidebar .si-android-app-badge img {
+  width: 100%;
+}
+
 /*
 <-------------- DARK THEME -------------->
 */

@@ -89,6 +89,20 @@ export class AudioPlayerComponent implements OnInit {
     }
   }
 
+  formatLabel(value: number) {
+    let duration = value
+    let seconds    = Math.floor(duration % 60),
+      displaySecs  = (seconds < 10) ? '0' + seconds : seconds,
+      minutes      = Math.floor((duration / 60) % 60),
+      displayMins  = (minutes < 10) ? '0' + minutes : minutes,
+      hours        = Math.floor(duration / 60 / 60),
+      displayHours = (hours < 10) ? '0' + hours : hours
+
+    displayHours = hours > 0 ? displayHours + ':' : ''
+
+    return displayHours + displayMins + ':' + displaySecs
+  }
+
   onSeekChanged(value: number | null) {
     if (value == null) return
 

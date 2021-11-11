@@ -1,18 +1,25 @@
 
 <!-- main container -->
-<div class="si-section">
+<div class="si-section" *ngIf="!isMobileDevice()">
 
   <!-- left sidebar -->
   <div class="si-sidebar si-left-sidebar no-select"
        [class.si-sidebar-dark]="themeService.isDark"
        [class.si-sidebar-light]="!themeService.isDark">
-
     <!-- app logo -->
     <si-logo></si-logo>
 
     <!-- app navigation -->
     <si-nav></si-nav>
 
+    <!-- android app badge -->
+    <si-android-app-badge></si-android-app-badge>
+
+    <!-- divider -->
+    <si-divider></si-divider>
+
+    <!-- theme settings -->
+    <si-settings></si-settings>
   </div>
 
   <!-- top section for navigation, main content and widgets -->
@@ -51,5 +58,13 @@
 
   </div>
 
+</div>
 
+<div class="si-download-mobile-app" *ngIf="isMobileDevice()">
+  <img
+    src="assets/svg/logo.svg"
+    width="250px"
+    height="210px"
+    onload="SVGInject(this)"/>
+  <si-android-app-badge></si-android-app-badge>
 </div>

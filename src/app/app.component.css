@@ -34,13 +34,14 @@
 .si-sidebar {
   min-width: 300px;
   width: 300px;
-  padding: 20px;
   box-sizing: border-box;
   z-index: 1;
 }
 
 .si-left-sidebar {
   border-right: 7px solid #9665ef;
+  display: flex;
+  flex-direction: column;
 }
 
 .si-right-sidebar {
@@ -52,5 +53,26 @@
   height: 70px;
   padding: 10px;
   box-sizing: border-box;
+  text-align: center;
+}
+
+si-nav {
+  flex-grow: 1;
+}
+
+.si-download-mobile-app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  gap: 20px;
   text-align: center;
 }

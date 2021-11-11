@@ -1,27 +1,8 @@
-<div class="si-dialog no-select">
+<div class="si-setting-section">
 
-  <!-- panel head -->
-  <div class="si-setting-heading si-panel-head"
-       [ngClass]="themeService.paneHeadBackground">
-
-    <!-- heading -->
-    <span class="si-panel-heading"
-      [ngClass]="themeService.text">Settings</span>
-
-    <!-- close button -->
-    <span class="si-panel-btn-close" (click)="close()">
-      <img src="assets/svg/close.svg"
-        width="20px"
-        height="20px"
-        onload="SVGInject(this)"
-        [ngClass]="themeService.icon" />
-    </span>
-
-  </div>
 
   <!-- panel body -->
-  <div class="si-setting-content si-panel-body"
-    [ngClass]="themeService.paneBodyBackground">
+  <div class="si-setting-content">
 
     <div class="si-setting-row">
       <span class="si-theme-text"

@@ -18,8 +18,7 @@ export class NavComponent implements OnInit {
       {id: 1, icon: 'kalam', text: 'Kalam', route: ''},
       {id: 2, icon: 'drum', text: 'Urs / Niaz', route: 'urs'},
       {id: 3, icon: 'pin', text: 'Location', route: 'location'},
-      {id: 4, icon: 'contact', text: 'Contact', route: 'contact'},
-      {id: 5, icon: 'settings', text: 'Settings'}
+      {id: 4, icon: 'contact', text: 'Contact', route: 'contact'}
     ]
   }
 
@@ -27,19 +26,7 @@ export class NavComponent implements OnInit {
   }
 
   handleNavigationClicked(navigation: any) {
-    switch (navigation.id) {
-      // handle settings click
-      case 5:
-        this.dialog.open(SettingsComponent, {
-          width: '400px',
-          height: '200px'
-        })
-        break;
-
-      default:
-        this.router.navigate([navigation.route])
-        break;
-    }
+    this.router.navigate([navigation.route])
   }
 
 }

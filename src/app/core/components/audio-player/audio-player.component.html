@@ -33,7 +33,7 @@
       [ngClass]="themeService.text">{{ timeElapsed }}</div>
 
     <div class="si-audio-seekbar-container">
-      <mat-slider thumbLabel [value]="seekValue" [min]="0" [max]="seekMaxValue" (mousedown)="onFocusSeekbar()" (window:mouseup)="onReleaseSeekbar()" (change)="onSeekChanged($event.value)" [disabled]="playerState == PlayerStateEnum.IDLE || playerState == PlayerStateEnum.CONNECTING" [ngClass]="themeService.audioSeekbar"></mat-slider>
+      <mat-slider thumbLabel [displayWith]="formatLabel" [value]="seekValue" [min]="0" [max]="seekMaxValue" (mousedown)="onFocusSeekbar()" (window:mouseup)="onReleaseSeekbar()" (change)="onSeekChanged($event.value)" [disabled]="playerState == PlayerStateEnum.IDLE || playerState == PlayerStateEnum.CONNECTING" [ngClass]="themeService.audioSeekbar"></mat-slider>
     </div>
 
     <div
@@ -83,7 +83,7 @@
 
   </div>
   <div class="si-audio-track-info-section">
-    
+
     <div class="si-audio-track-info">
         <span class="si-audio-track-title" [ngClass]="themeService.text">{{ trackService.activeTrack?.title }}</span>
         <span class="si-audio-track-meta" [ngClass]="themeService.text">{{ trackService.activeTrack?.location }} {{ trackService.activeTrack?.year }}</span>

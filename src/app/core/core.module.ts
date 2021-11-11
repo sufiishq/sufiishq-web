@@ -29,11 +29,12 @@ import {TrackService} from "./components/audio-player/track.service";
     MatSliderModule,
     SpringSpinnerModule
   ],
-  exports: [
-    LogoComponent,
-    NavComponent,
-    AudioPlayerComponent
-  ],
+    exports: [
+        LogoComponent,
+        NavComponent,
+        AudioPlayerComponent,
+        SettingsComponent
+    ],
   providers: [
     ThemeService
   ]
