@@ -18,7 +18,7 @@ export class NavComponent implements OnInit {
       {id: 1, icon: 'kalam', text: 'Kalam', route: ''},
       {id: 2, icon: 'drum', text: 'Urs / Niaz', route: 'urs'},
       {id: 3, icon: 'pin', text: 'Location', route: 'location'},
-      {id: 4, icon: 'contact', text: 'Contact', route: 'contact'}
+      {id: 4, icon: 'info', text: 'About', route: 'about'}
     ]
   }
 

@@ -39,13 +39,13 @@
 }
 
 .si-left-sidebar {
-  border-right: 7px solid #9665ef;
+  border-right: 7px solid #a5d4fd;
   display: flex;
   flex-direction: column;
 }
 
 .si-right-sidebar {
-  border-left: 7px solid #9665ef;
+  border-left: 7px solid #a5d4fd;
 }
 
 .si-footer {

@@ -34,7 +34,7 @@ import {ContactComponent} from "./features/contact/contact.component";
     RouterModule.forRoot([
       { path: 'urs', component: UrsComponent },
       { path: 'location', component: LocationComponent },
-      { path: 'contact', component: ContactComponent },
+      { path: 'about', component: ContactComponent },
       { path: '**', component: KalamComponent }
     ])
   ],

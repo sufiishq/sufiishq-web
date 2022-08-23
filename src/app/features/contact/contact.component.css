@@ -13,8 +13,11 @@
   gap: 10px
 }
 
-.si-contact-name {
-  font-size: 30px;
-  font-family: 'titillium-bold';
-  color: #9665ef;
+.si-about-info {
+    text-align: center;
+    width: 70%;
+}
+
+.si-about-link {
+  color: #0fade9;
 }
