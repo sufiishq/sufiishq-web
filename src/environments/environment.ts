@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  host: 'http://192.168.2.114:3200'
+  host: 'https://www.sufiishq.pk'
 };
 
 /*

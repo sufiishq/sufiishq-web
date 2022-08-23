@@ -235,7 +235,7 @@ export class AudioService {
 
       displayHours = hours > 0 ? displayHours + ':' : ''
 
-      return displayHours + displayMins + ':' + displaySecs
+      return Math.round(time).toString()
     }
 
 }

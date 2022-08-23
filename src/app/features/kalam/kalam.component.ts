@@ -23,13 +23,6 @@ export class KalamComponent implements OnInit {
   }
 
   kalams: any = []
-  backgrounds = [
-      '#ff0000', '#ff4800', '#ff8400', '#ffb700'
-    , '#ffdd00', '#e6ff00', '#b3ff00', '#59ff00'
-    , '#00ff2a', '#00ff90', '#00ffd9', '#00f7ff'
-    , '#00ccff', '#0099ff', '#0073ff', '#0048ff'
-    , '#000dff', '#4400ff', '#5900ff', '#7700ff'
-    , '#9500ff', '#c800ff', '#ff00f2', '#ff0077']
 
   constructor(private kalamService: KalamService, public themeService: ThemeService, public trackService: TrackService, public audioService: AudioService, private spinnerService: NgxSpinnerService) {
     this.search = debounce(this.search, 500)
@@ -50,11 +43,6 @@ export class KalamComponent implements OnInit {
       this.pageInfo.hasNext = res.has_next
       this.pageInfo.previous = res.previous
       this.pageInfo.next = res.next
-      for(let i = 0; i < this.kalams.length; i++) {
-        let firstColor = this.backgrounds[Math.floor(Math.random() * this.backgrounds.length)]
-        let secondColor = this.backgrounds[Math.floor(Math.random() * this.backgrounds.length)]
-        this.kalams[i].background = `linear-gradient(135deg, ${firstColor}, ${secondColor}`
-      }
     })
   }
 

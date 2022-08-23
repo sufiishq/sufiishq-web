@@ -10,18 +10,16 @@
     <ul>
       <li *ngFor="let kalam of kalams">
         <div class="si-kalam-item" (click)="selectKalam(kalam)" [style.border]="themeService.isDark ? '1px solid #4a4a4a' : '1px solid #f1f1f1'" [style.box-shadow]="themeService.isDark ? '#161616 0 0 5px' : '#5c5c5c 0 0 5px'">
-          <div class="si-kalam-head" [style.background-image]="kalam.background">
+          <div class="si-kalam-head" [style.background-color]="themeService.isDark ? '#444444' : '#efefef'">
             <span class="si-btn-play">
               <img
-                src="assets/svg/play.svg"
-                width="35px" height="35px"
-                onload="SVGInject(this)"/>
+                [src]="themeService.isDark ? 'assets/ic_logo_dark.png' : 'assets/ic_logo_light.png'"
+                width="50px" height="50px"/>
             </span>
           </div>
           <div class="si-kalam-body"  [style.background-color]="themeService.isDark ? '#3a3a3a' : '#dbdbdb'">
             <span class="si-kalam-title" [style.color]="themeService.isDark ? '#cec5d5' : '#262626'" >{{ kalam.title }}</span>
-            <span class="si-kalam-info" [style.color]="themeService.isDark ? '#b3b3b3' : '#6c6c6c'" > {{ kalam.location }} {{ kalam.year }}</span>
-            <span class="si-kalam-code" [style.color]="themeService.isDark ? '#a1a1a1' : '#121212'">Code: {{ kalam.code }}</span>
+            <span class="si-kalam-info" [style.color]="themeService.isDark ? '#b3b3b3' : '#6c6c6c'" > {{ kalam.location }} - {{ kalam.recorded_date }}</span>
           </div>
         </div>
       </li>
